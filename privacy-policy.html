@@ -4,121 +4,210 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidad - Asistente de Respuestas IA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { 
-            font-family: sans-serif; 
-            margin: 2em; 
-            line-height: 1.6; 
-            color: #eee; /* Color de texto claro */
-            background-color: #1a1a2e; /* Fondo oscuro que complementa el logo */
-        } 
-        h1 { 
-            color: #8d98ff; /* Color del título, similar al azul del logo */
-            text-align: center; 
-            margin-bottom: 1.5em; /* Espacio debajo del título principal */
+        /* Estilos Generales y Reseteo Básico */
+        body {
+            font-family: 'Poppins', sans-serif; /* Nueva fuente más moderna */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #E0E0E0; /* Texto claro */
+            background-color: #1a1a2e; /* Fondo oscuro principal */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centrar contenido principal */
+            justify-content: flex-start;
+            padding-bottom: 2em; /* Espacio al final */
         }
-        h2 { 
-            color: #e4e66d; /* Un color de acento, amarillo/verde brillante */
-            margin-top: 2em; 
-            margin-bottom: 1em; 
+
+        .container {
+            max-width: 900px;
+            margin: 2em 1em;
+            padding: 2em;
+            background-color: #2a2a4e; /* Fondo más claro para el contenido */
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            box-sizing: border-box; /* Incluir padding en el ancho total */
+            width: 100%; /* Asegurar que ocupe el ancho máximo del contenedor */
         }
-        img { 
-            display: block; 
-            margin: 0 auto 1.5em auto; 
-            max-width: 150px; 
-        } /* Estilos para centrar y dimensionar el logo */
-        p, ul, li { 
-            color: #ccc; /* Color de texto ligeramente más claro que el principal para párrafos */
-            margin-bottom: 1em; 
-        } 
-        ul { 
-            list-style: none; /* Quitamos los puntos por defecto */
-            padding: 0; 
+
+        /* Encabezado y Logo */
+        header {
+            text-align: center;
+            margin-bottom: 2.5em;
         }
-        li { 
-            margin-bottom: 0.5em; 
-            padding-left: 1.5em; 
-            position: relative; 
+
+        .logo-container {
+            margin-bottom: 1.5em;
         }
-        li::before { 
-            content: '•'; /* Puntos para las listas */
-            position: absolute; 
-            left: 0; 
-            color: #8d98ff; /* Color de los puntos, que combine con el título */
+
+        .logo-container img {
+            display: block;
+            margin: 0 auto;
+            max-width: 180px; /* Tamaño un poco más grande para el logo */
+            height: auto;
+            border-radius: 8px; /* Bordes ligeramente redondeados para el logo si es cuadrado */
+        }
+
+        h1 {
+            color: #8d98ff; /* Azul vibrante */
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-top: 0.5em;
+            line-height: 1.2;
+            text-align: center; /* Centrar el título de la política de privacidad */
+        }
+
+        /* Secciones de Contenido */
+        .section {
+            margin-bottom: 2.5em;
+        }
+
+        h2 {
+            color: #e4e66d; /* Amarillo/verde de acento */
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            text-align: left; /* Títulos de sección alineados a la izquierda */
+            border-bottom: 2px solid rgba(228, 230, 109, 0.3); /* Línea divisoria sutil */
+            padding-bottom: 0.5em;
+        }
+
+        p {
+            margin-bottom: 1.2em;
+            color: #ccc;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1.5em;
+        }
+
+        li {
+            margin-bottom: 0.8em;
+            padding-left: 2em;
+            position: relative;
+            font-size: 1.1em;
+        }
+
+        li::before {
+            content: '✓'; /* Icono de check (o bullet) */
+            position: absolute;
+            left: 0;
+            color: #4CAF50; /* Verde para el check */
             font-weight: bold;
-        } 
-        a { 
-            color: #4CAF50; /* Un verde vibrante para enlaces */
-            text-decoration: none; 
-        } 
-        a:hover { 
-            text-decoration: underline; 
+            font-size: 1.2em;
         }
-        .last-updated, .contact-info-footer { 
-            font-size: 0.9em; 
-            color: #999; /* Texto de nota en gris más claro */
-            margin-top: 2em; 
-            text-align: right; 
-        }
-        .contact-info-footer a { /* Ajuste para el enlace en el pie de página */
+
+        a {
             color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Pie de Página */
+        footer {
+            text-align: center;
+            margin-top: 3em;
+            font-size: 0.9em;
+            color: #A0A0A0;
+            padding-top: 1.5em;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Queries para Responsividad */
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.5em; }
+            .container { padding: 1.5em; margin: 1.5em 0.8em; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.3em; }
+            body { margin: 1em; }
+            .container { padding: 1em; margin: 1em 0.5em; }
         }
     </style>
 </head>
 <body>
-    <img src="logoia.png" alt="Logo AI Smart"> <h1>Política de Privacidad</h1>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="logoia.png" alt="Logo AI Smart"> </div>
+            <h1>Política de Privacidad</h1>
+            <p>Fecha de última actualización: 22 de mayo de 2025</p>
+        </header>
 
-    <p>Fecha de última actualización: 20 de mayo de 2025</p>
+        <section class="section">
+            <p>Esta política de privacidad describe cómo el "Asistente de Respuestas IA" (en adelante, "la Aplicación" o "nosotros") recopila, utiliza, almacena y protege la información que usted (el "Usuario" o "Empresa") proporciona al utilizar nuestros servicios.</p>
 
-    <p>Esta política de privacidad describe cómo el "Asistente de Respuestas IA" (en adelante, "la Aplicación" o "nosotros") recopila, utiliza, almacena y protege la información que usted (el "Usuario" o "Empresa") proporciona al utilizar nuestros servicios.</p>
+            <h2>1. Información que Recopilamos</h2>
+            <p>Para operar y mejorar nuestros servicios, la Aplicación accede y procesa las siguientes categorías de información de su cuenta de Google Business Profile, con su consentimiento explícito a través del proceso de autorización de Google OAuth:</p>
+            <ul>
+                <li>Reseñas Públicas: Texto de la reseña, calificación de estrellas, fecha y hora de la reseña, nombre del revisor (públicamente disponible en Google).</li>
+                <li>Datos de Ubicación de Negocio: Información básica de su perfil de Google Business Profile (como el ID de la ubicación, nombre del negocio, dirección) necesaria para identificar y asociar las reseñas y respuestas.</li>
+            </ul>
+            <p>La Aplicación no recopila ni almacena directamente datos personales sensibles de los revisores o de los usuarios de la aplicación que no sean estrictamente necesarios para la funcionalidad del servicio. No recopilamos información de contacto personal de los revisores (como correos electrónicos o números de teléfono) que no esté públicamente disponible a través de Google Business Profile.</p>
 
-    <h2>1. Información que Recopilamos</h2>
-    <p>Para operar y mejorar nuestros servicios, la Aplicación accede y procesa las siguientes categorías de información de su cuenta de Google Business Profile, con su consentimiento explícito a través del proceso de autorización de Google OAuth:</p>
-    <ul>
-        <li>Reseñas Públicas: Texto de la reseña, calificación de estrellas, fecha y hora de la reseña, nombre del revisor (públicamente disponible en Google).</li>
-        <li>Datos de Ubicación de Negocio: Información básica de su perfil de Google Business Profile (como el ID de la ubicación, nombre del negocio, dirección) necesaria para identificar y asociar las reseñas y respuestas.</li>
-    </ul>
-    <p>La Aplicación no recopila ni almacena directamente datos personales sensibles de los revisores o de los usuarios de la aplicación que no sean estrictamente necesarios para la funcionalidad del servicio. No recopilamos información de contacto personal de los revisores (como correos electrónicos o números de teléfono) que no esté públicamente disponible a través de Google Business Profile.</p>
+            <h2>2. Cómo Usamos su Información</h2>
+            <p>Utilizamos la información recopilada exclusivamente para los siguientes propósitos:</p>
+            <ul>
+                <li>Interpretación y Análisis: Para analizar el contenido, el sentimiento y la categorización de las reseñas recibidas.</li>
+                <li>Generación de Respuestas: Para generar respuestas automáticas y personalizadas a las reseñas, utilizando modelos de lenguaje avanzados (como Google Gemini o similares). Estas respuestas se basan en el contenido de la reseña y el tono configurado por el Usuario.</li>
+                <li>Publicación de Respuestas: Para publicar las respuestas generadas directamente en su perfil de Google Business Profile en su nombre, de acuerdo con la programación y configuración definidas por usted.</li>
+                <li>Mejora del Servicio: Para mejorar la calidad y relevancia de las respuestas generadas y el funcionamiento general de la Aplicación.</li>
+            </ul>
 
-    <h2>2. Cómo Usamos su Información</h2>
-    <p>Utilizamos la información recopilada exclusivamente para los siguientes propósitos:</p>
-    <ul>
-        <li>Interpretación y Análisis: Para analizar el contenido, el sentimiento y la categorización de las reseñas recibidas.</li>
-        <li>Generación de Respuestas: Para generar respuestas automáticas y personalizadas a las reseñas, utilizando modelos de lenguaje avanzados (como Google Gemini o similares). Estas respuestas se basan en el contenido de la reseña y el tono configurado por el Usuario.</li>
-        <li>Publicación de Respuestas: Para publicar las respuestas generadas directamente en su perfil de Google Business Profile en su nombre, de acuerdo con la programación y configuración definidas por usted.</li>
-        <li>Mejora del Servicio: Para mejorar la calidad y relevancia de las respuestas generadas y el funcionamiento general de la Aplicación.</li>
-    </ul>
+            <h2>3. Compartición y Divulgación de Datos</h2>
+            <p>La Aplicación no comparte, vende ni alquila su información de Google Business Profile ni las reseñas con terceros para fines publicitarios o de marketing. Solo se comparte la información necesaria con los modelos de lenguaje o servicios de IA utilizados para generar las respuestas. Estos modelos de lenguaje procesan la información de acuerdo con sus propias políticas de privacidad y seguridad de datos, y nos aseguramos de que cumplan con los estándares de confidencialidad adecuados.</p>
+            <p>Podemos divulgar información si así lo exige la ley o en respuesta a solicitudes válidas de autoridades públicas (por ejemplo, una orden judicial).</p>
 
-    <h2>3. Compartición y Divulgación de Datos</h2>
-    <p>La Aplicación no comparte, vende ni alquila su información de Google Business Profile ni las reseñas con terceros para fines publicitarios o de marketing. Solo se comparte la información necesaria con los modelos de lenguaje o servicios de IA utilizados para generar las respuestas. Estos modelos de lenguaje procesan la información de acuerdo con sus propias políticas de privacidad y seguridad de datos, y nos aseguramos de que cumplan con los estándares de confidencialidad adecuados.</p>
-    <p>Podemos divulgar información si así lo exige la ley o en respuesta a solicitudes válidas de autoridades públicas (por ejemplo, una orden judicial).</p>
+            <h2>4. Seguridad de los Datos</h2>
+            <p>Implementamos medidas de seguridad técnicas y organizativas adecuadas para proteger su información contra accesos no autorizados, alteraciones, divulgaciones, destrucciones o pérdidas. Esto incluye el cifrado de datos en tránsito y en reposo cuando sea aplicable, y el control de acceso a la información.</p>
 
-    <h2>4. Seguridad de los Datos</h2>
-    <p>Implementamos medidas de seguridad técnicas y organizativas adecuadas para proteger su información contra accesos no autorizados, alteraciones, divulgaciones, destrucciones o pérdidas. Esto incluye el cifrado de datos en tránsito y en reposo cuando sea aplicable, y el control de acceso a la información.</p>
+            <h2>5. Retención de Datos</h2>
+            <p>Retenemos la información de las reseñas y las respuestas generadas el tiempo necesario para proporcionar los servicios solicitados y para cumplir con nuestras obligaciones legales, resolver disputas y hacer cumplir nuestros acuerdos. Si usted decide revocar el acceso de la Aplicación a su cuenta de Google Business Profile, dejaremos de procesar nuevas reseñas, pero es posible que retengamos un registro de las reseñas y respuestas previamente procesadas para fines de auditoría y cumplimiento.</p>
 
-    <h2>5. Retención de Datos</h2>
-    <p>Retenemos la información de las reseñas y las respuestas generadas el tiempo necesario para proporcionar los servicios solicitados y para cumplir con nuestras obligaciones legales, resolver disputas y hacer cumplir nuestros acuerdos. Si usted decide revocar el acceso de la Aplicación a su cuenta de Google Business Profile, dejaremos de procesar nuevas reseñas, pero es posible que retengamos un registro de las reseñas y respuestas previamente procesadas para fines de auditoría y cumplimiento.</p>
+            <h2>6. Sus Derechos de Privacidad</h2>
+            <p>Usted conserva el control sobre su información. En cualquier momento, tiene derecho a:</p>
+            <ul>
+                <li>Revocar el acceso: Revocar el acceso de nuestra aplicación a su cuenta de Google Business Profile directamente desde la configuración de seguridad de su cuenta de Google. Al revocar el acceso, la Aplicación dejará de acceder a nuevas reseñas y de publicar respuestas en su nombre.</li>
+                <li>Acceder a sus datos: Solicitar acceso a la información que la Aplicación haya procesado relacionada con sus reseñas y respuestas.</li>
+                <li>Eliminar datos: Solicitar la eliminación de los datos de sus reseñas y respuestas almacenados por la Aplicación, sujeto a las limitaciones legales o de retención.</li>
+            </ul>
+            <p>Para ejercer estos derechos, por favor, contáctenos utilizando la información de contacto proporcionada a continuación.</p>
 
-    <h2>6. Sus Derechos de Privacidad</h2>
-    <p>Usted conserva el control sobre su información. En cualquier momento, tiene derecho a:</p>
-    <ul>
-        <li>Revocar el acceso: Revocar el acceso de nuestra aplicación a su cuenta de Google Business Profile directamente desde la configuración de seguridad de su cuenta de Google. Al revocar el acceso, la Aplicación dejará de acceder a nuevas reseñas y de publicar respuestas en su nombre.</li>
-        <li>Acceder a sus datos: Solicitar acceso a la información que la Aplicación haya procesado relacionada con sus reseñas y respuestas.</li>
-        <li>Eliminar datos: Solicitar la eliminación de los datos de sus reseñas y respuestas almacenados por la Aplicación, sujeto a las limitaciones legales o de retención.</li>
-    </ul>
-    <p>Para ejercer estos derechos, por favor, contáctenos utilizando la información de contacto proporcionada a continuación.</p>
+            <h2>7. Cumplimiento de las Políticas de Google API Services User Data</h2>
+            <p>El uso y la transferencia a cualquier otra aplicación de la información recibida de las APIs de Google se adherirán a la <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Google API Services User Data Policy</a>, incluidos los requisitos de uso limitado.</p>
 
-    <h2>7. Cumplimiento de las Políticas de Google API Services User Data</h2>
-    <p>El uso y la transferencia a cualquier otra aplicación de la información recibida de las APIs de Google se adherirán a la <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Google API Services User Data Policy</a>, incluidos los requisitos de uso limitado.</p>
+            <h2>8. Cambios en esta Política de Privacidad</h2>
+            <p>Podemos actualizar nuestra política de privacidad ocasionalmente para reflejar cambios en nuestras prácticas o por otras razones operativas, legales o reglamentarias. Le notificaremos sobre cualquier cambio significativo publicando la nueva política de privacidad en esta página y actualizando la "Fecha de última actualización" en la parte superior.</p>
+        </section>
 
-    <h2>8. Cambios en esta Política de Privacidad</h2>
-    <p>Podemos actualizar nuestra política de privacidad ocasionalmente para reflejar cambios en nuestras prácticas o por otras razones operativas, legales o reglamentarias. Le notificaremos sobre cualquier cambio significativo publicando la nueva política de privacidad en esta página y actualizando la "Fecha de última actualización" en la parte superior.</p>
-
-    <div class="contact-info-footer">
-        <h2>9. Contacto</h2>
-        <p>Si tiene alguna pregunta sobre esta política de privacidad o nuestras prácticas de datos, no dude en contactarnos:</p>
-        <p>Correo electrónico: <a href="mailto:info@aismart.ar">info@aismart.ar</a></p>
-        <p>© 2025 AI Smart. Todos los derechos reservados.</p>
+        <footer>
+            <h2>9. Contacto</h2>
+            <p>Si tiene alguna pregunta sobre esta política de privacidad o nuestras prácticas de datos, no dude en contactarnos:</p>
+            <p>Correo electrónico: <a href="mailto:info@aismart.ar">info@aismart.ar</a></p>
+            <p>&copy; 2025 AI Smart. Todos los derechos reservados.</p>
+        </footer>
     </div>
 </body>
 </html>
